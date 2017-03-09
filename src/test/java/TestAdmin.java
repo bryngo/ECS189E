@@ -155,4 +155,13 @@ public class TestAdmin {
 
     } // ChangeClassCapacity() with attempt to lower capacity to < # of students enrolled
 
+    @Test
+    public void testChangeCapacity7() {
+
+        this.iAdmin.changeCapacity("Class", 2017, 0);
+
+        assertEquals(this.iAdmin.getClassCapacity("Class", 2017), 50);
+
+    } // ChangeClassCapacity() with attempt to lower capacity to 0.
+
 }
